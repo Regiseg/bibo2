@@ -2,7 +2,7 @@ package human;
 
 import java.util.*;
 
-public class Human implements Comparable<Human> {
+public class Human implements Comparable<Human>, Cloneable {
 
     private String name;
     private Integer age;
@@ -33,6 +33,8 @@ public class Human implements Comparable<Human> {
                 '}';
     }
 
+
+
     public static void main(String[] args) {
         Human bibi = new Human("Bibi", 47);
         Human lili = new Human("Lili", 16);
@@ -51,6 +53,7 @@ public class Human implements Comparable<Human> {
         System.out.println(humans.get(1));
 
         System.out.println(Collections.binarySearch(humans, lili));
+
 
 
     }
