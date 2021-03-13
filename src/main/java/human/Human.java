@@ -1,9 +1,6 @@
 package human;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 public class Human implements Comparable<Human> {
 
@@ -44,10 +41,17 @@ public class Human implements Comparable<Human> {
 
         List<Human> humans = new ArrayList<>(Arrays.asList(bibi, lili));
         System.out.println(humans.get(0));
-        Collections.sort(humans);
+        Collections.sort(humans, new Comparator<Human>() {
+            @Override
+            public int compare(Human o1, Human o2) {
+                return o1.name.compareTo(o2.name);
+            }
+        });
         System.out.println(humans.get(0));
         System.out.println(humans.get(1));
 
         System.out.println(Collections.binarySearch(humans, lili));
+
+
     }
 }
