@@ -1,25 +1,23 @@
 package prueba;
 
-import jdk.dynalink.linker.LinkerServices;
 
-import java.util.ArrayDeque;
 import java.util.LinkedList;
-
-import java.util.List;
 import java.util.Queue;
 
 public class Prueba {
+    private int age = 40;
+
+    public Prueba(int age) {
+        age = age;
+    }
+
+    public int getAge() {
+        return age;
+    }
 
     public static void main(String[] args) {
 
-        Queue<String> names = new LinkedList<>();
-
-        names.add("Hello");
-        names.add("Bibo");
-        names.add("Tiva");
-
-        System.out.println(names.element());
-
-        System.out.println("Prueba");
+    Prueba prueba = new Prueba(35);
+        System.out.println(prueba.getAge());
     }
 }
