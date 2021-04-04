@@ -16,8 +16,11 @@ public class Prueba {
     }
 
     public static void main(String[] args) {
+        String s = "Bibi";
+        char[] c = s.toCharArray();
+        Double e = 5.6;
 
-    Prueba prueba = new Prueba(35);
+        Prueba prueba = new Prueba(35);
         System.out.println(prueba.getAge());
     }
 }
