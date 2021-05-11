@@ -1,17 +1,16 @@
 package prueba;
 
-
 public class Prueba {
 
 
     public static void main(String[] args) {
 
-        Human human = new Trainer("bibi");
+        Animal sheep = new Sheep();
 
-        human = new Human("Bibó");
+        Sheep cat = (Sheep) sheep;
 
-        Trainer trainer = (Trainer) new Human("bib");
+        cat.talk();
 
-       // System.out.println(trainer.getAge());
+
     }
 }
